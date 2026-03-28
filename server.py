@@ -2,7 +2,7 @@ import socket
 import threading
 
 HOST = '0.0.0.0'
-PORT = 55555
+PORT = 55556
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((HOST, PORT))
@@ -46,3 +46,5 @@ def receive():
 
         thread = threading.Thread(target=handle, args=(client,))
         thread.start()
+
+receive()
